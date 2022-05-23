@@ -1,7 +1,12 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import Divider from "../common/divider";
+import WithFunctions from "./withFunctions";
+import SimpleComponent from "./simpleComponent";
 
 const HocExercise = () => {
+    const ComponentWithAuth = WithFunctions(SimpleComponent);
+
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
@@ -55,6 +60,8 @@ const HocExercise = () => {
                     <code>localStorage</code>
                 </li>
             </ul>
+            <Divider/>
+            <ComponentWithAuth/>
         </CollapseWrapper>
     );
 };
